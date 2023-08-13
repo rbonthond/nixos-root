@@ -45,7 +45,6 @@
     tree
     unzip
     vim
-    vscode
     wget
     xz
     zsh
