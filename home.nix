@@ -19,7 +19,7 @@
     curl
     delta
     direnv
-    exa
+    eza
     fd
     fwupd
     fzf
@@ -86,7 +86,7 @@
     };
   };
 
-  programs.exa = {
+  programs.eza = {
     enable = true;
     enableAliases = true;
   };
