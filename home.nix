@@ -9,6 +9,8 @@
     homeDirectory = "/root";
   };
 
+  fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
     alejandra
     autorandr
@@ -20,7 +22,7 @@
     curl
     delta
     direnv
-    eza
+    lsd
     fd
     fwupd
     fzf
@@ -33,6 +35,7 @@
     lfs
     mc
     ncdu
+    nerdfonts
     neofetch
     nix-direnv
     p7zip
@@ -59,36 +62,33 @@
     htop.enable = true;
     jq.enable = true;
     starship.enable = true;
-  };
-
-  programs.direnv = {
-    enable = true;
-    enableBashIntegration = true;
-    nix-direnv = {enable = true;};
-  };
-
-  programs.git = {
-    enable = true;
-    lfs.enable = true;
-    delta.enable = true;
-    userName = "Robbin Bonthond";
-    userEmail = "robbin@bonthond.com";
-    aliases = {
-      ci = "commit";
-      co = "checkout";
+    direnv = {
+      enable = true;
+      enableBashIntegration = true;
+      nix-direnv = {enable = true;};
     };
-    extraConfig = {
-      color = {
-        diff = "auto";
-        status = "auto";
-        branch = "auto";
-        ui = "auto";
+    git = {
+      enable = true;
+      lfs.enable = true;
+      delta.enable = true;
+      userName = "Robbin Bonthond";
+      userEmail = "robbin@bonthond.com";
+      aliases = {
+        ci = "commit";
+        co = "checkout";
+      };
+      extraConfig = {
+        color = {
+          diff = "auto";
+          status = "auto";
+          branch = "auto";
+          ui = "auto";
+        };
       };
     };
-  };
-
-  programs.eza = {
-    enable = true;
-    enableAliases = true;
+    lsd = {
+      enable = true;
+      enableAliases = true;
+    };
   };
 }
