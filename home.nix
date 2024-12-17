@@ -30,6 +30,7 @@
     git-lfs
     gzip
     htop
+    just
     jq
     ksh
     lfs
