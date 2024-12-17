@@ -35,7 +35,7 @@
     lfs
     mc
     ncdu
-    nerdfonts
+    nerd-fonts.jetbrains-mono
     neofetch
     nix-direnv
     p7zip
