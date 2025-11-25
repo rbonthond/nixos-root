@@ -28,12 +28,12 @@
     fzf
     git
     git-lfs
+    dysk
     gzip
     htop
     just
     jq
     ksh
-    lfs
     mc
     ncdu
     nerd-fonts.jetbrains-mono
@@ -68,17 +68,20 @@
       enableBashIntegration = true;
       nix-direnv = {enable = true;};
     };
+    delta = {
+      enable = true;
+      enableGitIntegration = true;
+    };
     git = {
       enable = true;
       lfs.enable = true;
-      delta.enable = true;
-      userName = "Robbin Bonthond";
-      userEmail = "robbin@bonthond.com";
-      aliases = {
-        ci = "commit";
-        co = "checkout";
-      };
-      extraConfig = {
+      settings = {
+        user.name = "Robbin Bonthond";
+        user.email = "robbin@bonthond.com";
+        alias = {
+          ci = "commit";
+          co = "checkout";
+        };
         color = {
           diff = "auto";
           status = "auto";
