@@ -37,7 +37,7 @@
     mc
     ncdu
     nerd-fonts.jetbrains-mono
-    neofetch
+    fastfetch
     nix-direnv
     p7zip
     pciutils
